@@ -63,6 +63,11 @@ namespace :load do
       ]
     }
     set :nvm_map_bins, %w{node npm yarn}
-    set :nvm_exec_path, "#{fetch(:tmp_dir)}/nvm-exec-#{fetch(:application)}-#{fetch(:environment)}-#{fetch(:user)}.sh"
+    set :nvm_exec_path, -> {
+      # Try to avoid permissions issues when multiple users deploy the same app
+      # by using different file names in the same dir for each deployer and stage.
+      suffix = %i(application stage local_user).map { |key| fetch(key).to_s }.join("-")
+      "#{fetch(:tmp_dir)}/nvm-exec-#{suffix}.sh"
+    }
   end
 end
