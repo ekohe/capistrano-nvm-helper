@@ -2,7 +2,7 @@
 
 This gem provides idiomatic nvm support for Capistrano 3.x (and 3.x *only*).
 
-Difference between capistrano-nvm: avoid permission issues when multiple users deploy the same application by using different file names in the same directory for each deployer and stage.
+difference between `capistrano-nvm`: avoid permission issues when multiple users deploy the same application by using different file names in the same directory for each deployer and stage.
 
 ## Installation
 
@@ -33,7 +33,7 @@ set :nvm_map_bins, %w{node npm yarn webpack}
 
 ## Rails
 
-If you want to use nvm in your rails app deployment tasks (like `deploy:assets:precompile`), consider adding `rake` to `nvm_map_bins`.
+If you want to use nvm in your rails app deployment tasks (like `deploy:assets:precompile`), pls adding `rake` to `nvm_map_bins`.
 
 ## Contributing
 
