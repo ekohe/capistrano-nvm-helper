@@ -19,7 +19,7 @@ If bundler is not being used to manage dependencies, install the gem by executin
 Require in `Capfile` to use the default task:
 
 ```ruby
-require "capistrano/nvm-helper"
+require "capistrano/nvm"
 ```
 
 Configurable options in `config/deploy.rb`:

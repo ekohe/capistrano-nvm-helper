@@ -4,6 +4,6 @@
 
 - add NVM setup to Capistrano 3.x
 
-## [0.3.0] - 2023-10-29
+## [0.3.1] - 2023-10-29
 
 - remove useless scripts
